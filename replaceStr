@@ -1,0 +1,15 @@
+# This Python file uses the following encoding: utf-8
+import os, sys
+f_original= open("mylist","r")
+f_format= open("myNewFormattedList","w")
+contents = f_original.read().splitlines()
+
+print contents
+print "\n"
+
+slaveStr = '_Slave'
+newContents = [x + slaveStr for x in contents]
+
+print newContents
+f_format.close()   
+f_original.close()
